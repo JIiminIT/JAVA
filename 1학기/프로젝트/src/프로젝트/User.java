@@ -1,10 +1,12 @@
-package ÇÁ·ÎÁ§Æ®;
+package í”„ë¡œì íŠ¸;
+
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 
-import ÇÁ·ÎÁ§Æ®.Money.MyActionListener;
+import ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®.Money.MyActionListener;
 
 public class User extends JPanel {
 	MainJPanel test;
@@ -17,49 +19,49 @@ public class User extends JPanel {
 	
 	public User(MainJPanel test) {
 		this.test = test;
-		setLayout(null);//¼öµ¿À¸·Î ÄÄÆ÷³ÍÆ®¸¦ ¼³Á¤ÇÒ ¼ö ÀÖ°Ô ÇØÁØ´Ù.
+		setLayout(null);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö°ï¿½ ï¿½ï¿½ï¿½Ø´ï¿½.
 		
-		//¹öÆ° 3°³ »ı¼º
-		btn1 = new JButton("¾î¸°ÀÌ");
-        btn2 = new JButton("Ã»¼Ò³â");
-        btn3 = new JButton("¼ºÀÎ");
+		//ï¿½ï¿½Æ° 3ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+		btn1 = new JButton("ï¿½î¸°ï¿½ï¿½");
+        btn2 = new JButton("Ã»ï¿½Ò³ï¿½");
+        btn3 = new JButton("ï¿½ï¿½ï¿½ï¿½");
         
-        //¹è°æ ÀÌ¹ÌÁö »ı¼º
-        img = new ImageIcon("src/ÇÁ·ÎÁ§Æ®/img/ÁöÇÏÃ¶¿ª¹è°æ.jpg");
+        //ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        img = new ImageIcon("src/ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®/img/ï¿½ï¿½ï¿½ï¿½Ã¶ï¿½ï¿½ï¿½ï¿½ï¿½.jpg");
 		labelImage = new JLabel(img);
         
-		//¹öÆ° Å×µÎ¸® Á¦°Å
+		//ï¿½ï¿½Æ° ï¿½×µÎ¸ï¿½ ï¿½ï¿½ï¿½ï¿½
         btn1.setBorderPainted(false);
         btn2.setBorderPainted(false);
         btn3.setBorderPainted(false);
         
-      //x,y,xsize,ysize(ÁÂÇ¥¼³Á¤)
+      //x,y,xsize,ysize(ï¿½ï¿½Ç¥ï¿½ï¿½ï¿½ï¿½)
         btn1.setBounds(250, 550, 150, 40); 
         btn2.setBounds(430, 550, 150, 40);
         btn3.setBounds(610, 550, 150, 40);
         labelImage.setBounds(0, 0, 1000, 800);
         
-        //¶óº§ »ı¼º
-        lblLbl = new JLabel("¿¬·É´ë¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.");//¶óº§ »ı¼º
-      //x,y,xsize,ysize(¶óº§ ÁÂÇ¥)
+        //ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        lblLbl = new JLabel("ï¿½ï¿½ï¿½É´ë¸¦ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");//ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+      //x,y,xsize,ysize(ï¿½ï¿½ ï¿½ï¿½Ç¥)
 		lblLbl.setBounds(280,250,2000,150);
-		//¶óº§ »çÀÌÁî font : 15
+		//ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ font : 15
 		lblLbl.setFont(lblLbl.getFont().deriveFont(45.0f));
-		add(lblLbl);//¶óº§Ãß°¡
+		add(lblLbl);//ï¿½ï¿½ï¿½ß°ï¿½
 		
-		//¹öÆ° Ãß°¡
+		//ï¿½ï¿½Æ° ï¿½ß°ï¿½
         add(btn1);
         add(btn2);
         add(btn3);
-        //ÀÌ¹ÌÁö Ãß°¡
+        //ï¿½Ì¹ï¿½ï¿½ï¿½ ï¿½ß°ï¿½
         add(labelImage);
         
-        //¹öÆ°¿¡ ¾×¼Ç È¿°ú¸¦ ³Ö¾îÁÜ
+        //ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½×¼ï¿½ È¿ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¾ï¿½ï¿½ï¿½
         btn1.addActionListener(new MyActionListener1());
         btn2.addActionListener(new MyActionListener2());
         btn3.addActionListener(new MyActionListener3());
 	}
-	//ÆĞ³ÎÀ» change¸¦ ÇÏ±â À§ÇØ ¾×¼ÇÈ¿°ú¸¦ ³Ö¾îÁÜ.
+	//ï¿½Ğ³ï¿½ï¿½ï¿½ changeï¿½ï¿½ ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½×¼ï¿½È¿ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¾ï¿½ï¿½ï¿½.
 	class MyActionListener1 implements ActionListener {
 
 		@Override

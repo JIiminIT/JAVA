@@ -1,4 +1,4 @@
-package ¼öÇà;
+package ìˆ˜í–‰; ï¿½ï¿½ï¿½ï¿½;
 
 public class Adult extends User {
 	int num,money,age,movenum,moneyh;

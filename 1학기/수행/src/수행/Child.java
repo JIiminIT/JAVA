@@ -1,6 +1,6 @@
-package ¼öÇà;
+package ìˆ˜í–‰; ï¿½ï¿½ï¿½ï¿½;
 
-public class Youth extends User {
+public class Child extends User{
 	int num,money,age,movenum,moneyh;
 
 	public int getMoneyh() {
@@ -42,4 +42,7 @@ public class Youth extends User {
 	public void setMovenum(int movenum) {
 		this.movenum = movenum;
 	}
+	
+	
 }
+	
