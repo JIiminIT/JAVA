@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 
 public class GUi2_Components {
     public static void main(String[] args) {
@@ -31,7 +32,15 @@ public class GUi2_Components {
         panel.add(ta0);
 //   cx0.addItem('IUUUUU'); 추가하는거임
 
+
         panel.add(cx0);
+
+       /* bt0.addActionListener(new ActionListener() {
+            bt0.addActionListener(ActionEvent actionEvent) {
+                bt0.setText("Clicked");
+            }
+        });
+        */
 
         frame.add(panel);
 
