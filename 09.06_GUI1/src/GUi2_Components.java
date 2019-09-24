@@ -13,6 +13,9 @@ public class GUi2_Components {
         JCheckBox cb1 = new JCheckBox("JCheckBox1");
         JRadioButton rb0 = new JRadioButton("미성년자");
         JRadioButton rb1 = new JRadioButton("성인");
+
+        JPanel panelResult = new JPanel();
+        JLabel label = new JLabel();
         ButtonGroup bg = new ButtonGroup();//버튼을 하나로 그룹해서 취급한다.
         bg.add(rb0);
         bg.add(rb1);
@@ -30,17 +33,31 @@ public class GUi2_Components {
         panel.add(rb1);
         panel.add(tf0);
         panel.add(ta0);
+        panelResult.add(panelResult);
 //   cx0.addItem('IUUUUU'); 추가하는거임
 
-
         panel.add(cx0);
-
        /* bt0.addActionListener(new ActionListener() {
             bt0.addActionListener(ActionEvent actionEvent) {
                 bt0.setText("Clicked");
             }
         });
         */
+
+       public void actionPerformed(ActionEvent actionevent){
+            String result = "";
+            result += lb0.getText();
+            result += bt0.getText();
+            result += cb0.isSelected();
+            result += cb1.isSelected();
+            result += rb0.isSelected();
+            result += rb1.isSelected();
+            result += tf0.getText();
+            result += ta0.getText();
+            result += cx0.getSelectedIndex();
+            result += cx0.getSelectedItem();
+            lbResult.cbox.getText(result);
+        }
 
         frame.add(panel);
 
