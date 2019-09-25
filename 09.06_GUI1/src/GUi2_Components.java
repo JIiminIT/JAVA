@@ -1,6 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
+import java.awt.event.*;
 
 public class GUi2_Components {
     public static void main(String[] args) {
@@ -44,7 +44,48 @@ public class GUi2_Components {
         });
         */
 
-       public void actionPerformed(ActionEvent actionevent){
+       rb0.setSelected(true);
+       cb1.setSelected(true);
+       tf0.setText("전화번호를 입력하세요.");
+       tf0.addFocusListener(new FocusListener() {
+           @Override
+           public void focusGained(FocusEvent e) {
+               if (tf0.getText().equals("전화번호를 입력하세요.")) {
+                   tf0.setText("");
+               }
+           }
+
+           @Override
+           public void focusLost(FocusEvent e) {
+                if (tf0.getText().equals("")){
+                tf0.setText("전화번호를 입력하세요.");
+           }
+       };
+
+           ItemListener il = new ItemListener() {
+               @Override
+               public void itemStateChanged(ItemEvent e) {
+                    if(e.getSource() == cb0){
+                        System.out.println("Jcheckbox0 :" + cb0.isSelected() );
+                    } else if(e.getSource() == cb1){
+                        System.out.println("Jcheckbox1 :" + cb1.isSelected() );
+                    } else if(e.getSource() == rb0){
+                        System.out.println("미성년자:" + rb0.isSelected());
+                    } else if (e.getSource() == rb1){
+                        System.out.println("성인:" + rb1.isSelected());
+                    } else if (e.getSource() == cx0){
+                        System.out.println(cx0.getSelectedItem());
+
+                    }
+               }
+           };
+
+           cb0.addItemListener(il);
+           rb0.addItemListener(il);
+
+
+
+       public void actionPerformed(ActionEvent actionEvent){
             String result = "";
             result += lb0.getText();
             result += bt0.getText();
