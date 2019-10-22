@@ -6,10 +6,10 @@ public class GUI7_layout {
         JFrame frame = new JFrame("Components");
         JPanel panel = new JPanel();
 
-        panel.setLayout(null);
-        JButton by0 = new JButton("Button",0);
-        JButton by1 = new JButton("Button",1);
-        bt0.setBounds(100,200,300,400);
+//        panel.setLayout(null);
+//        JButton by0 = new JButton("Button",0);
+//        JButton by1 = new JButton("Button",1);
+//        bt0.setBounds(100,200,300,400);
 
         BorderLayout bl = new BorderLayout();
         panel.setLayout(bl);
