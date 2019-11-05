@@ -1,13 +1,14 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 
 public class main {
 
     public static void main(String ar[]) {
 
-        Font font = new Font("맑은고딕", Font.BOLD, 18);
+        Font font = new Font("맑은고딕", Font.BOLD, 20);
 
-        JFrame frame = new JFrame();
+        JFrame frame = new JFrame("퍼스널컬러 자가진단");
         JPanel panel = new JPanel();
 
         JLabel label = new JLabel("Personal Color", JLabel.CENTER);

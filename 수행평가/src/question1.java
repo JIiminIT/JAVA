@@ -1,34 +1,42 @@
 import javax.swing.*;
+import java.awt.*;
+
 public class question1 {
-// 퀴즈 문제랑 선택값 들어가는 변수 넣기.
 
-    String choice1;
+    public static void main(String ar[]) {
 
-    JPanel panel = new JPanel();
-    JFrame frame = new JFrame();
+        ImageIcon yellowskin = new ImageIcon("src/img/노란피부.PNG");
 
-    JButton qbt1_A = new JButton();
-    JButton qbt1_B = new JButton();
-    JButton qbt1_C = new JButton();
-    JButton qbt1_D = new JButton();
+        Font font = new Font("맑은고딕", Font.BOLD, 20);
+        String choice1;
 
-//    public void choice(String question1) {//버튼을 눌렀을시 체인지
-//        if(question1.equals("qbt1_A")) { // question class 버튼을 눌렀을때
-//            choice1 = "A";//A 들어감
-//            getContentPane().removeAll(); //데이터를 삭제함.
-//            getContentPane().add(question2);//question2로 넘어감
-//            revalidate();//validate() ,invalidate()[창 안에 자리잡고 있는 각각의 컴포넌트와 컨테이너들이 레이아웃에 맞춰서 사이즈가 변경이 필요할때]두가지를 한 번에 실행하고 싶을때 시용
-//            repaint();//update() 메소드를 자동호출
-//        }
-//
-//        btn1.addActionListener(new MyActionListener1());
-//        btn2.addActionListener(new MyActionListener2());
-//        btn3.addActionListener(new MyActionListener3());
+        JPanel panel = new JPanel();
+        JFrame frame = new JFrame();
+        frame.setLocation(500, 100);
+        frame.setPreferredSize(new Dimension(1000, 800));
 
+        JLabel label = new JLabel("본인의 피부색은?");
 
+        JButton qbt1_A_C = new JButton("A,C");
+        JButton qbt1_B_D = new JButton("B,D");
 
+        panel.setLayout(null);
 
+        qbt1_A_C.setBounds(200, 450, 150, 40);
+        qbt1_B_D.setBounds(600, 450, 150, 40);
+        label.setBounds(400, 50, 500, 40);
 
+        label.setFont(font);
 
+        panel.add(label);
+        panel.add(qbt1_A_C);
+        panel.add(qbt1_B_D);
 
+        frame.add(panel);
+
+        frame.pack();
+        frame.setVisible(true);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+    }
 }
